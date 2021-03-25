@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="ComunicationTest" targetName="ComunicationTest" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="04cb39d1-212f-4e5f-9783-812efe16ea5d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ProjectId" id="1q95dXM44L4lWP1N6xkRLJ1qCes" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ComunicationTest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ComunicationTest" TARGET_NAME="ComunicationTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ComunicationTest" RUN_TARGET_NAME="ComunicationTest">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="04cb39d1-212f-4e5f-9783-812efe16ea5d" name="Default Changelist" comment="" />
+      <created>1616479052443</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616479052443</updated>
+      <workItem from="1616479054050" duration="4503000" />
+      <workItem from="1616495964144" duration="3366000" />
+      <workItem from="1616500105833" duration="3082000" />
+      <workItem from="1616562902874" duration="11586000" />
+      <workItem from="1616657752317" duration="1965000" />
+      <workItem from="1616679793362" duration="346000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1608" height="357" key="GridCell.Tab.0.bottom" timestamp="1616679896463">
+      <screen x="0" y="0" width="1650" height="1100" />
+    </state>
+    <state width="1608" height="357" key="GridCell.Tab.0.bottom/0.0.1650.1100@0.0.1650.1100" timestamp="1616679896463" />
+    <state width="1608" height="357" key="GridCell.Tab.0.center" timestamp="1616679896462">
+      <screen x="0" y="0" width="1650" height="1100" />
+    </state>
+    <state width="1608" height="357" key="GridCell.Tab.0.center/0.0.1650.1019@0.0.1650.1019" timestamp="1616577623543" />
+    <state width="1608" height="357" key="GridCell.Tab.0.center/0.0.1650.1100@0.0.1650.1100" timestamp="1616679896462" />
+    <state width="1608" height="357" key="GridCell.Tab.0.left" timestamp="1616679896460">
+      <screen x="0" y="0" width="1650" height="1100" />
+    </state>
+    <state width="1608" height="357" key="GridCell.Tab.0.left/0.0.1650.1019@0.0.1650.1019" timestamp="1616577623541" />
+    <state width="1608" height="357" key="GridCell.Tab.0.left/0.0.1650.1100@0.0.1650.1100" timestamp="1616679896460" />
+    <state width="1608" height="357" key="GridCell.Tab.0.right" timestamp="1616679896463">
+      <screen x="0" y="0" width="1650" height="1100" />
+    </state>
+    <state width="1608" height="357" key="GridCell.Tab.0.right/0.0.1650.1100@0.0.1650.1100" timestamp="1616679896463" />
+    <state width="1608" height="380" key="GridCell.Tab.1.bottom" timestamp="1616577623581">
+      <screen x="0" y="0" width="1650" height="1100" />
+    </state>
+    <state width="1608" height="380" key="GridCell.Tab.1.bottom/0.0.1650.1100@0.0.1650.1100" timestamp="1616577623581" />
+    <state width="1608" height="380" key="GridCell.Tab.1.center" timestamp="1616577623579">
+      <screen x="0" y="0" width="1650" height="1100" />
+    </state>
+    <state width="1608" height="380" key="GridCell.Tab.1.center/0.0.1650.1100@0.0.1650.1100" timestamp="1616577623579" />
+    <state width="1608" height="380" key="GridCell.Tab.1.left" timestamp="1616577623579">
+      <screen x="0" y="0" width="1650" height="1100" />
+    </state>
+    <state width="1608" height="380" key="GridCell.Tab.1.left/0.0.1650.1100@0.0.1650.1100" timestamp="1616577623579" />
+    <state width="1608" height="380" key="GridCell.Tab.1.right" timestamp="1616577623580">
+      <screen x="0" y="0" width="1650" height="1100" />
+    </state>
+    <state width="1608" height="380" key="GridCell.Tab.1.right/0.0.1650.1100@0.0.1650.1100" timestamp="1616577623580" />
+    <state x="346" y="229" key="SettingsEditor" timestamp="1616497246340">
+      <screen x="0" y="0" width="1650" height="1100" />
+    </state>
+    <state x="346" y="229" key="SettingsEditor/0.0.1650.1100@0.0.1650.1100" timestamp="1616497246340" />
+  </component>
+</project>
