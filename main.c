@@ -12,6 +12,8 @@ typedef struct {
     double p;
     int length;
 }Data;
+
+double getMax(const double *list, int *index);
 int getFileLine(char *fileName);
 void getFileData(char *name, int startFile, int fileNumber, Data **pData);
 double powAndSqrt(double a, double b);
@@ -19,10 +21,12 @@ int slide(Data *data, Data *dataPSS, double *max);
 double signalStrength(Data *data);
 void bubbleSort(double list[], int *index);
 
-int main() {
+int main(){
     Data **data, **PSS;
-    int i, j, index[CELL_NUMBER], maxIndex[PSS_NUMBER][CELL_NUMBER];
-    double max[PSS_NUMBER][CELL_NUMBER], signal[CELL_NUMBER];
+    //index为冒泡排序后的对应的原数组的下标。maxIndex为找到相关性最强的点的位置。maxRelationIndex为每个小区和PSSx。
+    int i, j, index[CELL_NUMBER], maxIndex[PSS_NUMBER][CELL_NUMBER], maxRelationIndex[CELL_NUMBER];
+    //max为PSS和data滑动相关的最大值。signal为data的总功率。maxRelation为每个小区与3个PSS的滑动相关的最大值。
+    double max[PSS_NUMBER][CELL_NUMBER], signal[CELL_NUMBER], maxRelation[CELL_NUMBER];
     data = malloc(sizeof(Data *) * CELL_NUMBER);
     PSS = malloc(sizeof(Data *) * PSS_NUMBER);
     getFileData("data", FILE_NUMBER, CELL_NUMBER, data);
@@ -38,7 +42,7 @@ int main() {
             max[i][j] = m;
         }
     }
-    for (i = 0; i < CELL_NUMBER; i++) {
+    for (i = CELL_NUMBER - 1; i >= 0; i--) {
         printf("第%d小区的信号总功率:%f\n平均功率:%f\n", index[i] + FILE_NUMBER, signal[i], signal[i] / data[i][0].length);
     }
     for (i = 0; i < PSS_NUMBER; i++) {
@@ -46,9 +50,41 @@ int main() {
             printf("第%d小区在PSS%d下实际信号最强时第%5d点，信号强度为%f\n", j + FILE_NUMBER, i, maxIndex[i][j], max[i][j]);
         }
     }
+    for (i = 0; i < CELL_NUMBER; i++) {
+        double temp[PSS_NUMBER];
+        int PSSIndex;
+        for (j = 0; j < PSS_NUMBER; ++j) {
+            temp[j] = max[j][i];
+        }
+        maxRelation[i] = getMax(temp, &PSSIndex);
+        maxRelationIndex[i] = PSSIndex;
+    }
+    for (i = 0; i < CELL_NUMBER; i++) {
+        printf("第%d小区和PSS%d相关性最强，位置为%5d\n",
+                i + FILE_NUMBER, maxRelationIndex[i], maxIndex[maxRelationIndex[i]][i]);
+    }
+    bubbleSort(maxRelation, index);
+    for (i = CELL_NUMBER - 1; i >= 0; --i) {
+        //根据计算的下标来从数组中获得最大值以及最大值的位置
+        printf("第%d小区相关性最强的位置为%5d，最大值为%f\n",
+               index[i] + FILE_NUMBER, maxIndex[maxRelationIndex[index[i]]][index[i]],
+               max[maxRelationIndex[index[i]]][index[i]]);
+    }
     free(PSS);
     free(data);
     return 0;
+}
+
+double getMax(const double *list, int *index) {
+    int i;
+    double temp = 0;
+    for (i = 0; i < PSS_NUMBER; i++) {
+        if (list[i] > temp) {
+            temp = list[i];
+            *index = i;
+        }
+    }
+    return temp;
 }
 
 int getFileLine(char *fileName) {
