@@ -106,12 +106,15 @@ int slide(Data *data, Data *dataPSS, double *max) {
     int i, j, maxIndex = -1;
     int dataLength = data[0].length;
     int PSSLength = dataPSS[0].length;
-    double sum;
+    double sum, sumI, sumQ;
     for (i = 0; i < dataLength - PSSLength; i++) {
-        sum = 0;
+        sumI = 0;
+        sumQ = 0;
         for (j = 0; j < PSSLength; j++) {
-            sum += powAndSqrt((data[i + j].i * dataPSS[j].i), (data[i + j].p * dataPSS[j].p));
+            sumI += data[i + j].i * dataPSS[j].i;
+            sumQ += data[i + j].p * dataPSS[j].p;
         }
+        sum = powAndSqrt(sumI, sumQ);
         if (sum > *max) {
             *max = sum;
             maxIndex = i;
